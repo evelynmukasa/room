@@ -7,6 +7,7 @@
 body{
     display:grid;
     background-color: var(--White);
+    font-family:'League Spartan', sans-serif;
 }
 *{
     margin: 0;
@@ -96,17 +97,17 @@ nav ul li a {
 
 .slide .slideImage{
     background-color: var(--DarkGray);
-    aspect-ratio: 1;
 }
+
 .slideImage img{
+    aspect-ratio: 1;
     width: 100%;
-    aspect-ratio:1;
+    height: 100%;
 }
 
 .slide .slideText{
     padding: 2.5rem;
     width: 100%;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -114,6 +115,7 @@ nav ul li a {
 .slide .slideText h2{
    font-size: 2rem;
    color: var(--Black);
+   font-weight: 700;
 }
 .slide .slideText p{
     line-height: 1.5rem;
@@ -135,6 +137,7 @@ nav ul li a {
  text-decoration: none;
  color: var(--Black);
  letter-spacing: .6rem;
+ font-weight: 600;
 
 }
 .slider{
@@ -146,7 +149,7 @@ nav ul li a {
    padding: .5rem 2.5rem;
    right: 0;
    top:100vw;
-   transform: translateY(-42.4px);
+   transform: translateY(-39px);
 }
 
 .slider button{
@@ -190,9 +193,7 @@ nav ul li a {
     .slide:nth-child(3) .slideImage img{
         content: url('images/desktop-image-hero-3.jpg');
     }
-    .slide .slideImage{
-        aspect-ratio: 850/534;
-    }
+    
     .slide .slideImage img{
         width: 100%;
         height: 100%;
@@ -203,6 +204,7 @@ nav ul li a {
     nav{
         left: 50%;
     };
+    
 }
 @media(min-width:1154px){
     .heroBanner{
@@ -229,10 +231,9 @@ nav ul li a {
     .slider{
         left:850px;
         top: 534px;
+        transform: translateY(-42.4px);
     }
    
-    
-
 }
 @media(min-width:1204px){
     .slider{
@@ -273,12 +274,14 @@ nav ul li a {
    color: var(--Black);
    text-transform: uppercase;
    letter-spacing: .35rem;
+   font-weight: 600;
 }
 
 @media(min-width:567px) and (max-width:799px){
     .about p{
         line-height: 2rem;
         font-size: 1.3rem;
+        
     }
     .about h2{
         font-size:1rem ;
