@@ -95,7 +95,7 @@ nav ul li a {
 
 
 .slide .slideImage{
-
+    background-color: var(--DarkGray);
     aspect-ratio: 1;
 }
 .slideImage img{
