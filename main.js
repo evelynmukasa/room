@@ -21,3 +21,12 @@ function showSlides(n){
     }
     slides[slideIndex-1].style.display="grid";
 }
+let menu =document.getElementById('humburger');
+let nav =document.getElementById('nav');
+let close=document.getElementById('close');
+menu.addEventListener('click',()=>{
+  nav.style.display="block";
+})
+close.addEventListener('click',()=>{
+    nav.style.display="none";
+})

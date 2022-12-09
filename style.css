@@ -26,51 +26,76 @@ body{
     top: 3rem;
     right: 40%;
 }
-nav{ 
-    padding:2rem;
-    display: flex;
-    display: none;
-}
-nav ul{
-    
-    display: flex;
+nav{
     position: absolute;
-    right: 1rem;
+    top: 0;
+    left: 0;
+    width: 100VW;
+    background-color: var(--White);
+    padding: 3rem 0.5rem;
+    display: none;
+    z-index: 999;
+    
+}
+nav ul {
+    display: flex;
     list-style: none;
+    justify-content: right;
 }
-nav li{
-    margin-left: 1.5rem;
-    text-transform: lowercase;
+nav ul li {
+    margin-right: 1rem;
 }
-nav li:nth-child(2){
-    margin-left:5.5rem ;
-}
-@media(max-width:345px){
-    nav li:nth-child(2){
-        margin-left:3rem ;
-    }  
-}
-@media(max-width:306px){
-    nav li:nth-child(2){
-        margin-left:1rem ;
-    }   
-}
-@media(max-width:271px ){
-    nav ul{
-        position: relative;
-        flex-direction: column;
-    }
-    nav ul li {
-        margin-left: 0;
-        margin-top: 2rem;
-    }
-    nav ul li:nth-child(2){
-        margin-left: 0;
-    }
 
+nav ul li:first-child{
+    margin-left:0;
+    position: absolute;
+    left: 2rem;
 }
+
 nav ul li a {
     text-decoration: none;
+    color: var(--Black);
+}
+
+@media(max-width:300px)
+{
+    nav ul{
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(min-width:1024px){
+    .logo{
+        left:3rem;
+        top:4rem;
+    }
+    
+    .close{
+        display: none;
+    }
+    .humburger{
+        display: none;
+    }
+    nav{
+        top: 1rem;
+        background-color: transparent;
+        width: auto;
+        left: 18%;
+        display: flex;
+    }
+   
+    nav ul li {
+        text-transform: lowercase;
+        font-size: 1.05rem;
+        margin-right: 3rem;
+    }
+    nav ul li a {
+        top: 2rem;
+        color: var(--White);
+    }
 }
 .humburger{
     position: absolute;
@@ -106,17 +131,28 @@ nav ul li a {
 }
 
 .slide .slideText{
-    padding: 2.5rem;
+    padding: 2.5rem 1rem;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: top;
 }
 .slide .slideText h2{
-   font-size: 2rem;
+   font-size: 2.5rem;
    color: var(--Black);
    font-weight: 700;
+
 }
+
+@media(min-width:1440px){
+    .slide .slideText h2{
+        margin-right: 6rem;
+    }
+    .slide .slideText{
+        padding: 4rem 1rem 4rem 4rem;
+    }
+}
+
 .slide .slideText p{
     line-height: 1.5rem;
     margin: 2rem 0;
@@ -149,7 +185,7 @@ nav ul li a {
    padding: .5rem 2.5rem;
    right: 0;
    top:100vw;
-   transform: translateY(-39px);
+   transform: translateY(-37px);
 }
 
 .slider button{
@@ -160,28 +196,7 @@ nav ul li a {
     margin-right:1.8rem;
 }
 @media(min-width:1024px){
-    .logo{
-        left:3rem;
-        top:4rem;
-    }
-    nav{
-        position: absolute;
-        display: flex;
-        top: 1.89rem;
-        left: 25%;
-    }
-    nav li {
-        font-size: 1.05rem;
-    }
-    nav li a {
-        color: var(--White);
-    }
-    .close{
-        display: none;
-    }
-    .humburger{
-        display: none;
-    }
+    
     .slide:first-child .slideImage img{
         content: url('images/desktop-image-hero-1.jpg');
         
@@ -200,12 +215,6 @@ nav ul li a {
         aspect-ratio:850/534;
     }
 }
-@media (max-width:1184px){
-    nav{
-        left: 50%;
-    };
-    
-}
 @media(min-width:1154px){
     .heroBanner{
         height: 534px;
@@ -221,13 +230,6 @@ nav ul li a {
          width: 65vh;
     }
     
-    .slide .slideText h2
-    {
-        margin:0;
-    }
-    .slide .slideText p{
-        margin: 0;
-    }
     .slider{
         left:850px;
         top: 534px;
@@ -294,7 +296,7 @@ nav ul li a {
         height: 35vh;
     }
     .AboutSection .about {
-        padding:1rem 2rem;
+        padding:3rem 2rem;
     }
     .AboutSection .about p{
         margin: 2rem 0;
@@ -308,6 +310,8 @@ nav ul li a {
     }
     .AboutSection .AboutItem:nth-child(2){
         width: 40vw;
+        align-items: center;
+        justify-content: center;
     }
 
 }
