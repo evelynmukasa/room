@@ -25,8 +25,8 @@ let menu =document.getElementById('humburger');
 let nav =document.getElementById('nav');
 let close=document.getElementById('close');
 menu.addEventListener('click',()=>{
-  nav.style.display="block";
+  nav.style.transform="translateY(0)";
 })
 close.addEventListener('click',()=>{
-    nav.style.display="none";
+    nav.style.transform="translateY(-100vw)";
 })

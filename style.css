@@ -9,6 +9,9 @@ body{
     background-color: var(--White);
     font-family:'League Spartan', sans-serif;
 }
+img{
+    background-color: var(--DarkGray);
+}
 *{
     margin: 0;
     box-sizing: border-box;
@@ -27,15 +30,15 @@ body{
     right: 40%;
 }
 nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100VW;
     background-color: var(--White);
     padding: 3rem 0.5rem;
-    display: none;
     z-index: 999;
-    
+    transform: translateX(-100vw);
+    transition: transform .5s ease;
 }
 nav ul {
     display: flex;
