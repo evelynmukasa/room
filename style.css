@@ -9,9 +9,7 @@ body{
     background-color: var(--White);
     font-family:'League Spartan', sans-serif;
 }
-img{
-    background-color: var(--DarkGray);
-}
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -263,6 +261,7 @@ nav ul li a {
 }
 .AboutItem img{
     width: 100%;
+    background-color: var(--DarkGray);
 }
 .AboutSection .about{
     padding: 2.5rem;
